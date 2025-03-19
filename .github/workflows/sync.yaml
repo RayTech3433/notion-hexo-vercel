@@ -24,7 +24,7 @@ jobs:
       - name: Install Dependencies
         run: |
           export TZ='Asia/Shanghai'  # 保留时区设置
-          npm install --production
+          npm install  # 移除 --production，安装所有依赖
 
       - name: Sync Notion Articles
         env:
