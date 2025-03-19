@@ -23,8 +23,9 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          export TZ='Asia/Shanghai'  # 保留时区设置
-          npm install  # 移除 --production，安装所有依赖
+          export TZ='Asia/Shanghai'
+          npm install
+          npm install @elog/cli  # 显式安装 @elog/cli
 
       - name: Sync Notion Articles
         env:
