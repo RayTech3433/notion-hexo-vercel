@@ -48,13 +48,13 @@ avatar:
   effect: false
 
 # Disable all banner image
-disable_top_img: true
+disable_top_img: false
 
 # The banner image of home page
 index_img:
 
 # If the banner of page not setting, it will show the top_img
-default_top_img:
+default_top_img: 
 
 # The banner image of archive page
 archive_img:
@@ -231,7 +231,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: 博客仓库地址
-      link: https://github.com/LetTTGACO/notion-hexo
+      link: https://github.com/RayTech3433/notion-hexo-vercel
   card_announcement:
     enable: true
     content: Welcome to my Blog !!(๑•̀ㅂ•́)و✧ Have fun and enjoy it !!
@@ -272,8 +272,8 @@ aside:
 # busuanzi count for PV / UV in site
 # 訪問人數
 busuanzi:
-  site_uv: true
-  site_pv: true
+  site_uv: false
+  site_pv: false
   page_pv: true
 
 # Time difference between publish date and now (網頁運行時間)
@@ -644,7 +644,7 @@ text_align_justify: false
 background: url(https://cdn.jsdelivr.net/gh/RayTech3433/img/hexo_img/202503191443737.png)
 
 # Footer Background
-footer_bg: true
+footer_bg: false
 
 # Add mask to header or footer (为 header 或 footer 添加黑色半透遮罩)
 mask:
@@ -910,7 +910,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-  # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
   # - <script src="xxxx"></script>
 
