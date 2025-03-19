@@ -16,6 +16,20 @@ const format = async (doc, imageClient) => {
     // cover链接替换为本地图片
     doc.properties.cover = url
   }
+
+  // 检查是否需要加密
+  const isEncrypted = doc.properties.encrypt?.checkbox === true;
+  if (isEncrypted) {
+    // 添加固定的加密属性
+    doc.properties.password = '1113'; // 固定密码
+    doc.properties.abstract = '有东西被加密了，请输入密码查看'; // 固定摘要
+    doc.properties.message = '您好，这里需要密码'; // 固定提示
+    doc.properties.theme = 'xray'; // 固定主题
+    // 可选：添加更多固定值
+    doc.properties.wrong_pass_message = '抱歉，这个密码不对，请再试试';
+    doc.properties.wrong_hash_message = '抱歉，校验失败，但可查看内容';
+  }
+
   doc.body = matterMarkdownAdapter(doc);
   return doc;
 };
