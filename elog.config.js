@@ -4,7 +4,12 @@ module.exports = {
     notion: {
       token: process.env.NOTION_TOKEN,
       databaseId: process.env.NOTION_DATABASE_ID,
-      filter: { property: 'status', select: { equals: '已发布' }}
+      filter: {
+        or: [
+          { property: 'status', select: { equals: '已发布' } },
+          { property: 'status', select: { equals: '修改中' } }
+        ]
+      }
     }
   },
   deploy: {
@@ -16,7 +21,17 @@ module.exports = {
       catalog: false,
       frontMatter: {
         enable: true,
-        include: ['categories', 'tags', 'title', 'date', 'updated', 'permalink', 'cover', 'description','password'],
+        include: [
+          'categories',
+          'tags',
+          'title',
+          'date',
+          'updated',
+          'permalink',
+          'cover',
+          'description',
+          'password'
+        ],
         timeFormat: true,
       },
       formatExt: './format-image.js',
@@ -30,4 +45,4 @@ module.exports = {
       prefixKey: '/images'
     }
   },
-}
+};

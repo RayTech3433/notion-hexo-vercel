@@ -3,7 +3,7 @@
     {
       "id": "1bb3b936-9e8a-8058-9ab9-d736b2b23f6e",
       "doc_id": "1bb3b936-9e8a-8058-9ab9-d736b2b23f6e",
-      "updated": 1742392920000,
+      "updated": 1742394240000,
       "properties": {
         "permalink": "",
         "cover": "/images/da0db111faaf47a5e5210337b441502c.jpg",
@@ -11,13 +11,13 @@
           "Email"
         ],
         "categories": "杂类",
-        "date": "2025-03-19 08:00:00",
-        "password": true,
+        "date": "2025-03-19 00:00:00",
+        "password": "",
         "title": "Test",
-        "updated": "2025-03-19 22:02:00"
+        "updated": "2025-03-19 22:24:00"
       },
       "realName": "Test",
-      "relativePath": "/Test.md",
+      "relativePath": "\\Test.md",
       "docPath": "./source/_posts"
     },
     {
@@ -47,7 +47,7 @@
       "object": "page",
       "id": "1bb3b936-9e8a-8058-9ab9-d736b2b23f6e",
       "created_time": "2025-03-19T10:15:00.000Z",
-      "last_edited_time": "2025-03-19T14:02:00.000Z",
+      "last_edited_time": "2025-03-19T14:24:00.000Z",
       "created_by": {
         "object": "user",
         "id": "ac3943c5-5f18-4db2-bed6-a55c1015e66a"
@@ -79,10 +79,10 @@
           "Email"
         ],
         "categories": "杂类",
-        "date": "2025-03-19 08:00:00",
-        "password": true,
+        "date": "2025-03-19 00:00:00",
+        "password": "",
         "title": "Test",
-        "updated": "2025-03-19 22:02:00"
+        "updated": "2025-03-19 22:24:00"
       },
       "url": "https://www.notion.so/Test-1bb3b9369e8a80589ab9d736b2b23f6e",
       "public_url": null
@@ -118,15 +118,17 @@
       "in_trash": false,
       "properties": {
         "permalink": "",
-        "cover": "/images/08d28aeb6b27cb60a02b7c80b52f58df.jpg",
+        "cover": "https://www.notion.so/images/page-cover/nasa_the_blue_marble.jpg",
         "tags": [
           "Launch",
           "Email"
         ],
         "categories": "杂类",
-        "date": "2025-03-19 08:00:00",
+        "status": "已发布",
+        "date": "2025-03-19 00:00:00",
         "password": true,
         "title": "Feature launch",
+        "urlname": "1bb3b936-9e8a-813e-af19-d24a814655d9",
         "updated": "2025-03-19 21:54:00"
       },
       "url": "https://www.notion.so/Feature-launch-1bb3b9369e8a813eaf19d24a814655d9",
