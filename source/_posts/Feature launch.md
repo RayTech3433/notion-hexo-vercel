@@ -6,9 +6,9 @@ tags:
   - Email
 categories: 杂类
 date: '2025-03-19 00:00:00'
-encrypt: true
+password: true
 title: Feature launch
-updated: '2025-03-19 21:14:00'
+updated: '2025-03-19 21:54:00'
 ---
 
 12345
