@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Notion-Hexo
-subtitle: 'Notion + Elog + Hexo + GitHub Actions + Vercel 博客解决方案'
-description: 'Notion + Elog + Hexo + GitHub Actions + Vercel 博客解决方案'
+title: RayTechの书斋
+subtitle: ""
+description: "一名游走在网络边缘的路人甲"
 keywords:
-author: 1874
+author: Noble_Ray
 language: zh-CN
 timezone: Asia/Shanghai
 
