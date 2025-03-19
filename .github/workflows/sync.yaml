@@ -1,52 +1,55 @@
-name: Sync Docs
+name: Sync and Deploy Blog
 
 on:
-  # 允许手动push触发
-#  push:
-#    branches:
-#      - master
-  # 允许外部仓库事件触发
+  push:
+    branches:
+      - master
   repository_dispatch:
     types:
       - deploy
+  workflow_dispatch:  # 支持手动触发
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 检查分支
-        uses: actions/checkout@master
+      - name: Checkout Repository
+        uses: actions/checkout@v3
 
-      - name: 安装node环境
-        uses: actions/setup-node@master
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
+          node-version: "16.x"  # 兼容 16 和 16.x
 
-      - name: 安装依赖
+      - name: Install Dependencies
         run: |
-          export TZ='Asia/Shanghai'
-          npm install --prod
+          export TZ='Asia/Shanghai'  # 保留时区设置
+          npm install --production
 
-      - name: 拉取文档
+      - name: Sync Notion Articles
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-        run: |
-          npm run sync
+        run: npm run sync
 
-      - name: 配置Git用户名邮箱
+      - name: Configure Git
         run: |
-          git config --global user.name "xxx"
-          git config --global user.email "xxx"
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
 
-      - name: 提交拉取的文档到GitHub仓库
+      - name: Pull Remote Changes
         run: |
-          echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.txt
+          git pull origin master --rebase
+        continue-on-error: true  # 如果没有远程更新，忽略错误
+
+      - name: Commit Changes
+        run: |
+          echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.txt  # 保留 time.txt
           git add .
-          git commit -m "Refresh elog.cache.json" -a
+          git commit -m "Update blog from Notion" || echo "No changes to commit"
 
-      - name: 推送文档到仓库
-        uses: ad-m/github-push-action@master
+      - name: Push Changes
+        uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
