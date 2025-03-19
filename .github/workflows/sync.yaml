@@ -23,42 +23,14 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          export TZ='Asia/Shanghai'
-          npm install
-          npm install @elog/cli  # 显式安装 @elog/cli
+          export TZ='Asia/Shanghai'  # 保留时区设置
+          npm install --production
 
       - name: Sync Notion Articles
         env:
           NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
         run: npm run sync
-
-      - name: Remove Articles in "修改中" Status
-        env:
-          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
-          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-        run: |
-          node -e "
-            const fs = require('fs').promises;
-            const path = require('path');
-            const { queryNotionDatabase } = require('@elog/cli/lib/utils/notion');
-            (async () => {
-              const articles = await queryNotionDatabase(process.env.NOTION_DATABASE_ID, process.env.NOTION_TOKEN);
-              for (const article of articles.results) {
-                const status = article.properties.status?.select?.name;
-                if (status === '修改中') {
-                  const fileName = article.properties.title + '.md';
-                  const filePath = path.join('./source/_posts', fileName);
-                  try {
-                    await fs.unlink(filePath);
-                    console.log('Deleted:', filePath);
-                  } catch (err) {
-                    console.log('File not found or error deleting:', filePath);
-                  }
-                }
-              }
-            })();
-          "
 
       - name: Configure Git
         run: |
@@ -74,7 +46,7 @@ jobs:
         run: |
           echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.txt  # 保留 time.txt
           git add .
-          git commit -m "Sync Notion articles and remove '修改中' posts" || echo "No changes to commit"
+          git commit -m "Update blog from Notion" || echo "No changes to commit"
 
       - name: Push Changes
         uses: ad-m/github-push-action@v0.6.0
