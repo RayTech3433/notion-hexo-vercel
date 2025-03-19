@@ -34,7 +34,7 @@ module.exports = {
         ],
         timeFormat: true,
       },
-      formatExt: './format-image.js',
+      formatExt: './format-image.js', // 依赖此插件处理删除逻辑
     }
   },
   image: {
