@@ -210,3 +210,9 @@ h6::before {
   -webkit-animation: ccc 6s linear infinite;
   animation: ccc 6s linear infinite;
 }
+
+.loading-img {
+  background: url(https://cdn.jsdelivr.net/gh/RayTech3433/img/hexo_img/202503191414050.png)
+    no-repeat center center;
+  background-size: cover;
+}
