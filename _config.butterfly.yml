@@ -231,7 +231,7 @@ aside:
       enable: true
       icon: fab fa-github
       text: 博客仓库地址
-      link: https://github.com/RayTech3433/notion-hexo-vercel
+      link: https://blog.710043.xyz
   card_announcement:
     enable: true
     content: Welcome to my Blog !!(๑•̀ㅂ•́)و✧ Have fun and enjoy it !!
