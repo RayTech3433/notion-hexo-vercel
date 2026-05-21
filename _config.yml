@@ -125,6 +125,9 @@ magnet:
     - name: 杂类
       display_name: 杂类
       icon: 📚
+    - name: 学习
+      display_name: 小冰の读书笔记
+      icon: 📒
     # - name: 游戏评测
     #   display_name: 小冰の游戏评测
     #   icon: 🎮
@@ -134,9 +137,6 @@ magnet:
     # - name: vue
     #   display_name: 小冰の编程学习
     #   icon: 👩‍💻
-    # - name: 学习
-    #   display_name: 小冰の读书笔记
-    #   icon: 📒
     # - name: 随想
     #   display_name: 小冰の胡思乱想
     #   icon: 💡
