@@ -41,8 +41,8 @@ social:
 
 # Favicon（網站圖標）
 favicon: 
-  small: /img/favicon-16x16.png
-  medium: /img/favicon-32x32.png
+  small: /img/favicon16.ico
+  medium: /img/favicon32.ico
 
 # Avatar (頭像)
 avatar:
