@@ -7,7 +7,7 @@ module.exports = {
       filter: {
         or: [
           { property: 'status', select: { equals: '已发布' } },
-          { property: 'status', select: { equals: '修改中' } }
+          { property: 'status', select: { equals: '编辑中' } }
         ]
       }
     }
