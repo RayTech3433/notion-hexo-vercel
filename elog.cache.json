@@ -44,7 +44,7 @@
     {
       "id": "3663b936-9e8a-8054-a099-dc88d372319a",
       "doc_id": "3663b936-9e8a-8054-a099-dc88d372319a",
-      "updated": 1779331680000,
+      "updated": 1779336780000,
       "properties": {
         "permalink": "",
         "tags": [
@@ -54,7 +54,7 @@
         "date": "2026-05-20 08:00:00",
         "password": true,
         "title": "2025年度总结",
-        "updated": "2026-05-21 10:48:00"
+        "updated": "2026-05-21 12:13:00"
       },
       "realName": "2025年度总结",
       "relativePath": "/2025年度总结.md",
@@ -66,7 +66,7 @@
       "object": "page",
       "id": "3663b936-9e8a-8054-a099-dc88d372319a",
       "created_time": "2026-05-20T03:22:00.000Z",
-      "last_edited_time": "2026-05-21T02:48:00.000Z",
+      "last_edited_time": "2026-05-21T04:13:00.000Z",
       "created_by": {
         "object": "user",
         "id": "ac3943c5-5f18-4db2-bed6-a55c1015e66a"
@@ -96,7 +96,7 @@
         "date": "2026-05-20 08:00:00",
         "password": true,
         "title": "2025年度总结",
-        "updated": "2026-05-21 10:48:00"
+        "updated": "2026-05-21 12:13:00"
       },
       "url": "https://www.notion.so/2025-3663b9369e8a8054a099dc88d372319a",
       "public_url": null,
@@ -137,14 +137,16 @@
       "is_locked": false,
       "properties": {
         "permalink": "",
-        "cover": "/images/ddd64e35f160b0eaa92db513eda8af3e.jpg",
+        "cover": "https://www.notion.so/images/page-cover/webb1.jpg",
         "tags": [
           "study"
         ],
         "categories": "学习",
+        "status": "已发布",
         "date": "2026-04-17 08:00:00",
         "password": "",
         "title": "嵌入式",
+        "urlname": "3453b936-9e8a-80a4-8b6e-f0776744eace",
         "updated": "2026-05-20 11:23:00"
       },
       "url": "https://www.notion.so/3453b9369e8a80a48b6ef0776744eace",
