@@ -40,7 +40,9 @@ social:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: /img/favicon.png
+favicon: 
+  small: /img/favicon-16x16.png
+  medium: /img/favicon-32x32.png
 
 # Avatar (頭像)
 avatar:
